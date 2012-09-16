@@ -961,8 +961,8 @@
   var History = Backbone.History = function(options) {
     this.handlers = [];
     _.bindAll(this, 'checkUrl');
-    this.location = options && options.location || root.location;
-    this.history = options && options.history || root.history;
+    this.location = options && options.location || root.location || window.location;
+    this.history = options && options.history || root.history || window.history;
   };
 
   // Cached regex for cleaning leading hashes and slashes.
